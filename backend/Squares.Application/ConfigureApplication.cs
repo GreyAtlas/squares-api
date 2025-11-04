@@ -15,7 +15,7 @@ namespace Squares.Application
             this IServiceCollection services)
         {
             services.AddScoped<IPointsService, PointsService>();
-
+            services.AddScoped<ISquaresService, SquaresService>();
             return services;
         }
     }

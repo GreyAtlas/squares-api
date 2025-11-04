@@ -2,11 +2,5 @@
 
 namespace Squares.Domain.ValueObjects
 {
-    public record Square
-    {
-        public required Point PointNW;
-        public required Point PointNE;
-        public required Point PointSE;
-        public required Point PointSW;
-    }
+    public record Square(Coordinate Point1, Coordinate Point2, Coordinate Point3, Coordinate Point4);
 }
