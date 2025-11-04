@@ -9,11 +9,11 @@ namespace Squares.Application.DTOs
     /// <param name="PointNE">2D coordinates representing the top right corner</param>
     /// <param name="PointSE">2D coordinates representing the bottom right corner</param>
     /// <param name="PointSW">2D coordinates representing the bottom left corner</param>
-    public record SquareDTO(PointDTO PointNW, PointDTO PointNE, PointDTO PointSE, PointDTO PointSW) {
+    public record SquareDTO(PointDTO Point1, PointDTO Point2, PointDTO Point3, PointDTO Point4) {
         public static SquareDTO FromValueObject(Square square) =>
-                new SquareDTO(PointDTO.FromEntity(square.PointNW),
-                    PointDTO.FromEntity(square.PointNE),
-                    PointDTO.FromEntity(square.PointSE), 
-                    PointDTO.FromEntity(square.PointSW));
+                new SquareDTO(new PointDTO(square.Point1.X, square.Point1.Y),
+                        new PointDTO(square.Point2.X, square.Point2.Y),
+                        new PointDTO(square.Point3.X, square.Point3.Y),
+                        new PointDTO(square.Point4.X, square.Point4.Y));
     }
 }
