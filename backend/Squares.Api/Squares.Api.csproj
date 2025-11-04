@@ -16,8 +16,4 @@
     <ProjectReference Include="..\Squares.Infrastructure\Squares.Infrastructure.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Endpoints\" />
-  </ItemGroup>
-
 </Project>
