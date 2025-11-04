@@ -7,10 +7,10 @@ namespace Squares.Application.Interfaces
 {
     public interface IPointsService
     {
-        public Task<PointList> GetPointListAsync(int listId);
-        public Task<int> CreatePointListAsync(List<PointDTO> points);
-        public Task AddPointToListAsync(PointDTO point, int listId);
-        public Task RemovePointFromListAsync(PointDTO point, int listId);
+        Task<PointList> GetPointListAsync(int listId);
+        Task<int> CreatePointListAsync(List<PointDTO> points);
+        Task<int> AddPointToListAsync(PointDTO point, int listId);
+        Task RemovePointFromListAsync(PointDTO point, int listId);
 
     }
 }

@@ -1,4 +1,5 @@
-﻿using Squares.Domain.ValueObjects;
+﻿using Squares.Domain.Entities;
+using System.Runtime.CompilerServices;
 
 namespace Squares.Application.DTOs
 {
@@ -9,7 +10,9 @@ namespace Squares.Application.DTOs
     /// <param name="Y">Y coordinate</param>
     public record PointDTO(int X, int Y)
     {
-        public static PointDTO FromValueObject(Point point) =>
+        public static PointDTO FromEntity(Point point) =>
             new PointDTO(point.X, point.Y);
+        public Point ToPoint() =>
+            new Point() { X = this.X, Y = this.Y};
     }
 }
