@@ -8,6 +8,9 @@
 
   <ItemGroup>
     <Folder Include="Services\" />
+    <Folder Include="DTOs\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Repositories\" />
   </ItemGroup>
 
   <ItemGroup>
