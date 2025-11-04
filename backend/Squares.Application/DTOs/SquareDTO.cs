@@ -11,9 +11,9 @@ namespace Squares.Application.DTOs
     /// <param name="PointSW">2D coordinates representing the bottom left corner</param>
     public record SquareDTO(PointDTO PointNW, PointDTO PointNE, PointDTO PointSE, PointDTO PointSW) {
         public static SquareDTO FromValueObject(Square square) =>
-                new SquareDTO(PointDTO.FromValueObject(square.PointNW),
-                    PointDTO.FromValueObject(square.PointNE),
-                    PointDTO.FromValueObject(square.PointSE), 
-                    PointDTO.FromValueObject(square.PointSW));
+                new SquareDTO(PointDTO.FromEntity(square.PointNW),
+                    PointDTO.FromEntity(square.PointNE),
+                    PointDTO.FromEntity(square.PointSE), 
+                    PointDTO.FromEntity(square.PointSW));
     }
 }

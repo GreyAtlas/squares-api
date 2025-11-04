@@ -1,4 +1,6 @@
-﻿namespace Squares.Domain.ValueObjects
+﻿using Squares.Domain.Entities;
+
+namespace Squares.Domain.ValueObjects
 {
     public record Square
     {

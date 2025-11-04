@@ -36,12 +36,12 @@ namespace Squares.Api.Endpoints
             });
             
             group.MapPost("/",
-                async Task<Ok>
+                async Task<Ok<int>>
                 ([FromBody] CreatePointsListRequest createPointsListRequest,
                 [FromServices] IPointsService pointsService) =>
             {
-                await pointsService.CreatePointListAsync(createPointsListRequest.Points);
-                return TypedResults.Ok();
+                var result = await pointsService.CreatePointListAsync(createPointsListRequest.Points);
+                return TypedResults.Ok(result);
             });
 
             group.MapPost("/{id}/points", 
